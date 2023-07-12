@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperPC tu tienda</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <link href="{% static 'core/css/forms.css'%}" rel="stylesheet">
+</head>
+<body >
+  <nav class="navbar navbar-expand navbar-dark bg-danger">
+    <div class="container">
+      <img src="{% static 'core/img/logo.webp'%}" width="100" height="80" class="d-inline-block" alt="">
+      <a class="navbar-brand" href="#">Taller mecánico Rayo Makween</a>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'home' %}">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'producto' 'ins' -1%}">Mantenedor</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'producto_tienda' %}">Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'nosotros' %}">Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+    <div class="container centro">
+        <div class="col-md-12 text-center">
+          <br>
+          <br>
+        <h1 class="centro" style="color:red;" = "display-4"><b>¡Sobre Nosotros!</b></h1>
+        <p  style = "font-family:optima;"><b> Nuestra empresa ofrece servicios de calidad, además buscamos brindarte tranquilidad y seguridad en todos tus recorridos</b></p>
+    </div>
+    
+      <div class="row">
+        <div class="col-md-6">
+            <h2></h2>
+            <br>
+            <br>
+              <h1 style = "font-family:optima;"><b>Experiencia</b></h1>
+             <p>Dedicados a la mantención y reparación de vehículos desde 2021. En estos más de 2 años hemos visto y reparado de todo lo que te podrás imaginar, y así mismo hemos aprendido y evolucionado a la par con las nuevas tecnologías de la industria automotriz. Iniciamos en un pequeño local ubicado en Lira 616. En el año 2021 nos trasladamos a Calle Carmen 856; donde funciona hasta el día de hoy nuestra casa matriz y desde donde nos hemos expandido a 4 sucursales para estar más cerca de nuestros clientes, compartiendo nuestra filosofía de calidad y atención al cliente.</p>
+        </div>
+        <div class="col-md-4">
+          <br>
+          <br>
+          <img src="{% static 'core/img/expe.jpg'%}" class="d-block w-100" alt="Imagen 2">
+        </div>
+        <div class="row">
+        <div class="col-md-4">
+          <br>
+          <br>
+          <img src="{% static 'core/img/retroalimentacion.jpg'%}" class="d-block w-100" alt="Imagen 2">
+        </div>
+        <div class="col-md-6">
+          <br>
+          <br>
+          <h1 style = "font-family:optima;"><b>Transparencia</b></h1>
+          <p>Cada vez que nos visitas te entregamos un diagnóstico detallado con lo que necesita tu vehículo. Te explicamos en términos claros y sencillos cuál es el problema con tu auto y qué es lo que se necesita para sus reparaciones, incluyendo el detalle de los repuestos y costos asociados. En nuestras instalaciones te podrás sentir cómodo y observar como se realiza el trabajo. Nuestros mecánicos responden todas tus dudas. Si hay que reemplazar repuestos, te entregamos los antiguos para que estés seguro que efectivamente cambiamos las partes defectuosas de tu auto.</p>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+              <h2></h2>
+              <br>
+              <br>
+                <h1 style = "font-family:optima;"><b>Calidad y precio</b></h1>
+               <p>Sabemos que tienes cosas más importantes que hacer que venir al mecánico, por eso no queremos que vengas seguido. Nuestro compromiso es entregarte un servicio de calidad, y eso no lo podemos hacer si cobramos muy barato. Ya conoces el dicho, lo barato sale caro. Eso si, ten por seguro que lo que pagas es un precio justo. Nuestros precios no serán los más baratos, pero tampoco los más caros. Es cosa que compares en Google y te darás cuenta.</p>
+          </div>
+          <div class="col-md-4">
+            <br>
+            <br>
+            <img src="{% static 'core/img/calidad.png'%}" class="d-block w-100" alt="Imagen 2">
+          </div>
+    
+    
+      <div class="container col-md-4">
+        <br><br><br><br>
+        <h2 style = "font-family:optima;">Misión</h2>
+          <p>Como empresa nuestra misión es prooveer a nuestros clientes con servicios de alta calidad, seguros, confiables y accesibles.</p>
+      </div>
+      
+      <div class="centro col-md-4">
+        <br><br><br>
+        <img src="{% static 'core/img/vision.png'%}" class="d-block w-100" alt="Imagen 2">
+      </div>
+    
+      <div class="container col-md-4">
+        <h2></h2>
+        <br><br><br><br>
+        <h2 style = "font-family:optima;">Visión</h2>
+        <p>Tenemos la visión de evolucionar como empresa hasta llegar a una linea de servicios y productos certificada y conocida mundialmente.</p>
+      <br><br>
+      </div>
+    </body>
+</html>

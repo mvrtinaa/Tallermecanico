@@ -1,0 +1,259 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <link href="{% static 'core/css/style.css'%}" rel="stylesheet">
+  
+
+</head>
+<body class="color_body">
+  <!-- Menú de navegación -->
+  <nav class="navbar navbar-expand navbar-dark bg-danger">
+    <div class="container">
+      <img src="{% static 'core/img/logo.webp'%}" width="100" height="80" class="d-inline-block" alt="">
+      <a class="navbar-brand" href="#">Taller mecánico Rayo Makween</a>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'home' %}">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'producto' 'ins' -1%}">Mantenedor</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'producto_tienda' %}">Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'nosotros' %}">Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+    <!-- Carrusel -->
+    <br>
+    <br>
+    <h2 class="text-center"><b> Nuestros ultimos trabajos</b></h2>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'core/img/ambulancia.jpg'%}" class="d-block w-100" alt="Imagen 1">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'core/img/pintura.jpg'%}" class="d-block w-100" alt="Imagen 2">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'core/img/medición.jpg'%}" class="d-block w-100" alt="Imagen 3 ">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden" style="color: black;">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden" style="color: black;">Siguiente</span>
+      </a>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+        </div>
+        <div class="container centro">
+          <h2 class="text-center"><b> Nuestros servicios</b></h2>
+          <p>Somos expertos en el cuidado de tu vehículo, no importa la marca o modelo, manejamos un amplio catálogo de repuestos y servicios. Nuestros profesionales cuentan con basta experiencia para atender todos tus requerimientos.              </p>
+        </p>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="container centro">
+      <div class="row">
+  <div class="col-md-4">
+<div class="card">
+  <img src="{% static 'core/img/cambioace.jpg'%}" class="d-block w-100" alt="Imagen 2">
+<div class="card-body">
+<h5 class="card-title" class="centro">Cambio de aceite</h5>
+<button onclick="ocultarp1()">Ver detalles</button>
+<br>
+<p1> El cambio de aceite de un auto es un proceso necesario para reemplazar el aceite usado y contaminado del motor por uno nuevo y limpio. Consiste en drenar el aceite viejo, reemplazar el filtro de aceite y llenar el motor con aceite fresco y de calidad. Este mantenimiento regular ayuda a mantener el motor en buen estado, asegurando un funcionamiento suave, una mejor eficiencia y una mayor durabilidad del vehículo. <p1>
+</div>
+</div>
+</div>
+<br>
+<br> 
+<div class="col-md-4">
+<div class="card">
+  <img src="{% static 'core/img/motor.jpg'%}" class="d-block w-100" alt="Imagen 2">
+<div class="card-body">
+<h5 class="card-title">Revisión motor</h5>
+<button onclick="ocultarp2()">Ver detalles</button>
+<br>
+<p2>El objetivo principal de esta revisión es identificar cualquier desgaste, deterioro o falla en los componentes del motor antes de que se conviertan en problemas graves. También se pueden realizar ajustes, limpiezas y reemplazos de piezas según sea necesario.</p2>
+</div>
+</div>
+</div>
+<br>
+<br> 
+<div class="col-md-4">
+<div class="card">
+  <img src="{% static 'core/img/freno.jpg'%}" class="d-block w-100" alt="Imagen 2">
+<div class="card-body">
+<h5 class="card-title">Revisión frenos</h5>
+<button onclick="ocultarp3()">Ver detalles</button>
+<br>
+<p3>Se examinan los discos de freno, las pastillas de freno, los cilindros de rueda (en caso de frenos de tambor), los calibradores de freno, las mangueras y tuberías de freno, así como el nivel y la calidad del fluido de frenos. El objetivo principal de esta revisión es garantizar que los frenos estén en buenas condiciones y puedan proporcionar una frenada efectiva y segura. </p3>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br>
+<br> 
+<div class="container">
+      <div class="row">
+  <div class="col-md-4">
+<div class="card">
+  <img src="{% static 'core/img/computec.jpg'%}" class="d-block w-100" alt="Imagen 2">
+<div class="card-body">
+  <h5 class="card-title">Scanner automotriz</h5>
+  <button onclick="ocultarp4()">ver detalles</button>
+  <br>
+  <p4>El scanner es utilizado para realizar diagnósticos precisos y determinar las reparaciones o mantenimiento necesarios.Al obtener información detallada sobre los sistemas del automóvil, el escáner con computadora ayuda a agilizar el proceso de solución de problemas, ahorrar tiempo y evitar posibles costos necesarios.</p4>
+  </div>
+</div>
+</div>
+  <div class="col-md-4">
+<div class="card">
+  <img src="{% static 'core/img/pintura.jpg'%}" class="d-block w-100" alt="Imagen 2">
+<div class="card-body">
+  <h5 class="card-title">Desabolladura y pintura</h5>
+  <button onclick="ocultarp5()">ver detalles</button>
+  <br>
+  <p5>Certificados en desabolladura y pintura automotriz. Pintura al horno, pulidos, igualación de color, desabollador eléctrico Limpieza de motor y tapiz a vapor incluido en el servicio.</p5>
+  </div>
+</div>
+</div>
+  <div class="col-md-4">
+<div class="card">
+  <img src="{% static 'core/img/suspención.jpg'%}" class="d-block w-100" alt="Imagen 2">
+<div class="card-body">
+  <h5 class="card-title">Llantas</h5>
+  <button onclick="ocultarp6()">ver detalles</button>
+  <br>
+  <p6> Se realizan diversas tareas relacionadas con las llantas para garantizar su correcto funcionamiento y seguridad en el vehículo. Como Cambio de llantas, Balanceo de llantas, Alineación de llantas.</p6>
+  </div>
+</div>
+</div>
+        <!-- Repite las columnas para más productos -->
+      </div>
+    </div>
+    <br><br>
+    
+    
+      <!-- Bootstrap JS y jQuery CDN -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+      <script src="{% static 'core/js/script.js'%}"></script>
+    </body>
+    
+    <footer class="footer bg-danger text-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h4>Dirección</h4>
+            <p>123 Calle Principal, Ciudad, País</p>
+          </div>
+          <div class="col-md-6">
+            <h4>Contacto</h4>
+            <p>Teléfono: +1 234 5678</p>
+            <p>Email: info@example.com</p>
+            <p>Horario: Lunes a Viernes, 9:00 AM - 5:00 PM</p>
+          </div>
+        </div>
+      </div>
+      <!--Scripts para ocultar-->
+      <script>
+        function ocultarp1(){
+            visible = $('p1').is(":visible");
+            if(visible){
+                $('p1').hide();
+            }else{
+                $('p1').show();
+            }
+            }
+    </script>
+    <script>
+        function ocultarp2(){
+            visible = $('p2').is(":visible");
+            if(visible){
+                $('p2').hide();
+            }else{
+                $('p2').show();
+            }
+            }
+    </script>
+    <script>
+        function ocultarp3(){
+            visible = $('p3').is(":visible");
+            if(visible){
+                $('p3').hide();
+            }else{
+                $('p3').show();
+            }
+            }
+    </script>
+    <script>
+        function ocultarp4(){
+            visible = $('p4').is(":visible");
+            if(visible){
+                $('p4').hide();
+            }else{
+                $('p4').show();
+            }
+            }
+    </script>
+    <script>
+        function ocultarp5(){
+            visible = $('p5').is(":visible");
+            if(visible){
+                $('p5').hide();
+            }else{
+                $('p5').show();
+            }
+            }
+    </script>
+    <script>
+        function ocultarp6(){
+            visible = $('p6').is(":visible");
+            if(visible){
+                $('p6').hide();
+            }else{
+                $('p6').show();
+            }
+            }
+    </script>
+</div>
+
+
+    </footer>
+    </html>
